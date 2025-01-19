@@ -1,0 +1,4 @@
+name,governmentId,email,debtAmount,debtDueDate,debtId
+John Doe,11111111111,johndoe@example.com,1000000.00,2022-10-12,1adb6ccf-ff16-467f-bea7-5f05d494280f
+Jane Smith,22222222222,janesmith@example.com,2500.50,2022-11-15,2bdc7ddg-ee26-468f-cea8-6f06e595281g
+Bob Johnson,33333333333,bjohnson@example.com,750.75,2022-12-20,3cde8eeh-dd36-469f-dea9-7g07f696382h
