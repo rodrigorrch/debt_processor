@@ -22,7 +22,7 @@ RSpec.describe Api::V1::DebtsController, type: :controller do
     end
 
     context 'with invalid file' do
-      let(:file) { fixture_file_upload('invalid.txt', 'text/plain') }
+        let(:file) { fixture_file_upload('invalid.txt', 'text/plain') }
 
       it 'returns unprocessable_entity status' do
         post :upload, params: { file: file }

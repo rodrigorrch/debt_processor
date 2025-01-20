@@ -57,6 +57,10 @@ module DebtProcessor
       end
     end
 
+    # Ensure AASM models are properly loaded
+    config.autoload_paths += %W(#{config.root}/app/models)
+    config.eager_load_paths += %W(#{config.root}/app/models)
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
