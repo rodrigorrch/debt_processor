@@ -5,12 +5,15 @@ Este repositório contém a implementação de um sistema escalável para proces
 ---
 ## **Subir o projeto**
 `docker-compose build`
+
 `docker-compose up -d`
+
 `docker-compose exec web rails db:create db:migrate`
+
 `docker-compose exec web bin/rails db:test:prepare`
 
 ### **Apis e monitoramento**
-Temos 2 API`s:
+Temos 2 APIs:
 Nesta api enviamos o arquivo
 `curl --location 'localhost:3000/api/v1/debts/upload' \
 --header 'Content-Type: multipart/form-data' \
