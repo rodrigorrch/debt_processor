@@ -15,14 +15,17 @@ Este repositório contém a implementação de um sistema escalável para proces
 ### **Apis e monitoramento**
 Temos 2 APIs:
 Nesta api enviamos o arquivo
+
 `curl --location 'localhost:3000/api/v1/debts/upload' \
 --header 'Content-Type: multipart/form-data' \
 --form 'file=@"/C:/Users/rodri/Documents/Kanastra/input.csv"'`
 
 Nesta api monitoramos o status:
+
 `curl --location 'localhost:3000/api/v1/debts/status/{id}'`
 
 Também podemos monitorar a fila por este link
+
 `http://localhost:3000/sidekiq/`
 
 ## **Escalabilidade**
