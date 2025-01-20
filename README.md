@@ -3,6 +3,24 @@
 Este repositório contém a implementação de um sistema escalável para processamento e geração de registros financeiros a partir de arquivos CSV. Ele inclui uma arquitetura baseada em Redis, Sidekiq, processamento em chunks e cobertura de testes unitários e de integração.
 
 ---
+## **Subir o projeto**
+`docker-compose build`
+`docker-compose up -d`
+`docker-compose exec web rails db:create db:migrate`
+`docker-compose exec web bin/rails db:test:prepare`
+
+### **Apis e monitoramento**
+Temos 2 API`s:
+Nesta api enviamos o arquivo
+`curl --location 'localhost:3000/api/v1/debts/upload' \
+--header 'Content-Type: multipart/form-data' \
+--form 'file=@"/C:/Users/rodri/Documents/Kanastra/input.csv"'`
+
+Nesta api monitoramos o status:
+`curl --location 'localhost:3000/api/v1/debts/status/{id}'`
+
+Também podemos monitorar a fila por este link
+`http://localhost:3000/sidekiq/`
 
 ## **Escalabilidade**
 
